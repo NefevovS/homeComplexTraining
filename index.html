@@ -196,26 +196,145 @@
           </button>
         </main>
         <aside class="sidebar">
+          <!-- WIDGET -->
           <div class="widget">
             <div class="widget__title">Близость к метро</div>
             <div class="widget__body">
+              <!--Location-->
               <div class="location--group">
                 <div class="location--group__row">
-                  <button class="location__btn location__btn--active">
+                  <input
+                    type="checkbox"
+                    id="location-1"
+                    class="location__checkbox"
+                  />
+                  <label class="location__btn" for="location-1">
                     &lt; 10
-                  </button>
-                  <button class="location__btn location__btn--active">
-                    10-20
-                  </button>
-                  <button class="location__btn">20-30</button>
-                  <button class="location__btn">30+</button>
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="location-2"
+                    class="location__checkbox"
+                  />
+                  <label class="location__btn" for="location-2"> 10-20 </label>
+                  <input
+                    type="checkbox"
+                    id="location-3"
+                    class="location__checkbox"
+                  />
+                  <label
+                    class="location__btn"
+                    for="location-3"
+                    class="location__checkbox"
+                    >20-30</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="location-4"
+                    class="location__checkbox"
+                  />
+                  <label
+                    class="location__btn"
+                    for="location-4"
+                    class="location__checkbox"
+                    >30+</label
+                  >
                 </div>
                 <div class="location--group__row">
-                  <button class="location__btn">Любая</button>
+                  <input
+                    type="checkbox"
+                    id="location-5"
+                    class="location__checkbox"
+                  />
+                  <label class="location__btn" for="location-5">Любая</label>
                 </div>
               </div>
             </div>
           </div>
+          <!-- WIDGET -->
+
+          <!-- WIDGET -->
+          <div class="widget">
+            <div class="widget__title">Срок сдачи</div>
+            <div class="widget__body">
+              <label class="radio">
+                <input type="radio" class="radio__real" name="term"/ checked>
+                <span class="radio__fake"></span>
+                <span class="radio__title">Любой</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" class="radio__real" name="term"/ >
+                <span class="radio__fake"></span>
+                <span class="radio__title">Сдан</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" class="radio__real" name="term"/ >
+                <span class="radio__fake"></span>
+                <span class="radio__title">В этом году</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" class="radio__real" name="term"/ >
+                <span class="radio__fake"></span>
+                <span class="radio__title">В следующем году</span>
+              </label>
+            </div>
+          </div>
+          <!-- WIDGET -->
+
+          <!-- WIDGET -->
+          <div class="widget">
+            <div class="widget__title">Дополнительные опции</div>
+            <div class="widget__body">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__real" name="term"/
+                checked>
+                <span class="checkbox__fake"></span>
+                <span class="checkbox__title">Двор без машин</span>
+              </label>
+
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__real" name="term"/ >
+                <span class="checkbox__fake"></span>
+                <span class="checkbox__title">Высокие потолки</span>
+              </label>
+
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__real" name="term"/ >
+                <span class="checkbox__fake"></span>
+                <span class="checkbox__title">Панорамные окна</span>
+              </label>
+
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__real" name="term"/ >
+                <span class="checkbox__fake"></span>
+                <span class="checkbox__title">Есть кладовые</span>
+              </label>
+              <div class="hidden-elements">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term"/ >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 1</span>
+                </label>
+
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term"/ >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 2</span>
+                </label>
+
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term"/ >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 3</span>
+                </label>
+              </div>
+              <button class="show-more">Показать ещё</button>
+            </div>
+          </div>
+          <!-- WIDGET -->
         </aside>
       </div>
     </div>
