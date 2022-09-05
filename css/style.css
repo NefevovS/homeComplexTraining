@@ -8,11 +8,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 15px;
 }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 830px;
+  }
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -20,8 +26,20 @@ body {
 .main {
   width: 870px;
 }
+.main + .sidebar {
+  margin-left: 30px;
+}
 .sidebar {
   width: 270px;
+  min-width: 200px;
+}
+@media (max-width: 829px) {
+  .sidebar {
+    display: none;
+  }
+  .container {
+    width: 600px;
+  }
 }
 
 .card {
@@ -29,12 +47,17 @@ body {
   background-color: white;
   position: relative;
 }
-
 .cards__holder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 30px;
+}
+@media (max-width: 599px) {
+  .cards__holder {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .card__badges {
   font-weight: 400;
@@ -357,6 +380,7 @@ body {
 
 .toggle {
   position: relative;
+  cursor: pointer;
 }
 .toggle__real {
   width: 1px;
@@ -372,6 +396,8 @@ body {
   height: 20px;
   background-color: #c4c4c4;
   border-radius: 10px;
+  vertical-align: bottom;
+  margin-right: 10px;
 }
 .toggle__fake::before {
   position: absolute;
@@ -397,6 +423,44 @@ body {
   background-color: #ffe074;
 }
 .toggle__real:checked + .toggle__fake::before {
-  left: auto;
-  right: 2px;
+  left: 19px;
+  /* right: 2px; */
+}
+
+/* FORM BUTTONS */
+
+.form__btn {
+  font-family: inherit;
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #3c3c3c;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.form__btn + .form__btn {
+  margin-top: 10px;
+}
+.form__btn img {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.form__btn:hover {
+  background-color: rgb(223, 223, 223);
+}
+.form__btn_submit {
+  background-color: #ffcf26;
+  color: #000000;
+  border: none;
+}
+.form__btn_submit:hover {
+  background-color: rgb(224, 186, 47);
 }
