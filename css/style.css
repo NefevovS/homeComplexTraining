@@ -35,7 +35,17 @@ body {
 }
 @media (max-width: 829px) {
   .sidebar {
-    display: none;
+    /* display: none; */
+    position: fixed;
+    margin-left: 0 !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.37);
+    overflow-y: scroll;
+    /* transform: translateX(-120%); */
   }
   .container {
     width: 600px;
