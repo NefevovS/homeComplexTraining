@@ -196,6 +196,67 @@
               </div>
             </div>
           </a>
+
+          <div class="hidden-cards main cards__holder">
+            <a href="#!" class="card__link">
+              <div class="card">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--class">Комфорт</div>
+                  <div class="card__badge card__badge--credit">
+                    Рассрочка 12 мес.
+                  </div>
+                </div>
+                <div class="card__img">
+                  <img src="./sourses/img/card.jpg" alt="card" />
+                </div>
+                <div class="card__content">
+                  <h4 class="card__title">ЖК Ильинские луга</h4>
+                  <div class="card__term">Срок сдачи до 4 кв. 2022 г.</div>
+                  <div class="card__metro">Октябрьская</div>
+                  <div class="card__adress">пр. Льва Толстого 180А</div>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="card__link">
+              <div class="card">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--class">Комфорт</div>
+                  <div class="card__badge card__badge--credit">
+                    Рассрочка 12 мес.
+                  </div>
+                </div>
+                <div class="card__img">
+                  <img src="./sourses/img/card.jpg" alt="card" />
+                </div>
+                <div class="card__content">
+                  <h4 class="card__title">ЖК Ильинские луга</h4>
+                  <div class="card__term">Срок сдачи до 4 кв. 2022 г.</div>
+                  <div class="card__metro">Октябрьская</div>
+                  <div class="card__adress">пр. Льва Толстого 180А</div>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="card__link">
+              <div class="card">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--class">Комфорт</div>
+                  <div class="card__badge card__badge--credit">
+                    Рассрочка 12 мес.
+                  </div>
+                </div>
+                <div class="card__img">
+                  <img src="./sourses/img/card.jpg" alt="card" />
+                </div>
+                <div class="card__content">
+                  <h4 class="card__title">ЖК Ильинские луга</h4>
+                  <div class="card__term">Срок сдачи до 4 кв. 2022 г.</div>
+                  <div class="card__metro">Октябрьская</div>
+                  <div class="card__adress">пр. Льва Толстого 180А</div>
+                </div>
+              </div>
+            </a>
+          </div>
+
           <button class="more">
             <img src="./sourses/img/plus-circle.svg" alt="plus" />
             Показать еще
@@ -215,6 +276,7 @@
                       type="checkbox"
                       id="location-1"
                       class="location__checkbox"
+                      data-location-param
                     />
                     <label class="location__btn" for="location-1">
                       &lt; 10
@@ -223,6 +285,7 @@
                       type="checkbox"
                       id="location-2"
                       class="location__checkbox"
+                      data-location-param
                     />
                     <label class="location__btn" for="location-2">
                       10-20
@@ -231,6 +294,7 @@
                       type="checkbox"
                       id="location-3"
                       class="location__checkbox"
+                      data-location-param
                     />
                     <label
                       class="location__btn"
@@ -242,6 +306,7 @@
                       type="checkbox"
                       id="location-4"
                       class="location__checkbox"
+                      data-location-param
                     />
                     <label
                       class="location__btn"
@@ -268,7 +333,7 @@
               <div class="widget__title">Срок сдачи</div>
               <div class="widget__body">
                 <label class="radio">
-                  <input type="radio" class="radio__real" name="term"/ checked>
+                  <input type="radio" class="radio__real" name="term"/ >
                   <span class="radio__fake"></span>
                   <span class="radio__title">Любой</span>
                 </label>
@@ -300,7 +365,7 @@
               <div class="widget__body">
                 <label class="checkbox">
                   <input type="checkbox" class="checkbox__real" name="value-01"/
-                  checked>
+                  >
                   <span class="checkbox__fake"></span>
                   <span class="checkbox__title">Двор без машин</span>
                 </label>
@@ -325,29 +390,30 @@
                   <span class="checkbox__fake"></span>
                   <span class="checkbox__title">Есть кладовые</span>
                 </label>
-                <div class="hidden-elements">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__real"
-                    name="value-05"/ >
-                    <span class="checkbox__fake"></span>
-                    <span class="checkbox__title">Дополнительный пункт 1</span>
-                  </label>
 
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__real"
-                    name="value-06"/ >
-                    <span class="checkbox__fake"></span>
-                    <span class="checkbox__title">Дополнительный пункт 2</span>
-                  </label>
+                <label class="checkbox checkbox--hidden">
+                  <input type="checkbox" class="checkbox__real" name="value-05"/
+                  >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 1</span>
+                </label>
+                <label class="checkbox checkbox--hidden">
+                  <input type="checkbox" class="checkbox__real" name="value-06"/
+                  >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 2</span>
+                </label>
 
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__real"
-                    name="value-07"/ >
-                    <span class="checkbox__fake"></span>
-                    <span class="checkbox__title">Дополнительный пункт 3</span>
-                  </label>
-                </div>
-                <button class="show-more">Показать ещё</button>
+                <label class="checkbox checkbox--hidden">
+                  <input type="checkbox" class="checkbox__real" name="value-07"/
+                  >
+                  <span class="checkbox__fake"></span>
+                  <span class="checkbox__title">Дополнительный пункт 3</span>
+                </label>
+
+                <button data-options="hidden" class="show-more">
+                  Показать ещё
+                </button>
               </div>
             </div>
             <!-- WIDGET -->
@@ -356,7 +422,7 @@
               <div class="widget__body">
                 <label class="toggle">
                   <input type="checkbox" class="toggle__real" name="commision"/
-                  checked>
+                  >
                   <span class="toggle__fake"></span>
                   <span class="toggle__title">Услуги 0%</span>
                 </label>
@@ -370,7 +436,7 @@
                 <button class="form__btn form__btn_submit">
                   Применить фильтры
                 </button>
-                <button class="form__btn">
+                <button class="form__btn" type="reset">
                   <img src="./sourses/img/x.svg" alt="" />Сбросить фильтры
                 </button>
               </div>

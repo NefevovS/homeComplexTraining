@@ -23,13 +23,13 @@ sidebarToggleBtn.onclick = function () {
 };
 
 /* Показать еще 3 карточки */
-const btnShowMoreCards = document.querySelector(".btn-more");
-const hiddenCards = document.querySelectorAll(".card-link--hidden");
+const btnShowMoreCards = document.querySelector(".more");
+const hiddenCards = document.querySelectorAll(".hidden-cards");
 
 // Клик по кнопке и показ трех скрытых карточек
 btnShowMoreCards.addEventListener("click", function () {
   hiddenCards.forEach(function (card) {
-    card.classList.remove("card-link--hidden");
+    card.classList.remove("hidden-cards");
   });
 });
 
@@ -49,7 +49,7 @@ widgets.forEach(function (widget) {
 });
 
 /* Location - кнопка Любая */
-const checkBoxAny = document.querySelector("#location-05");
+const checkBoxAny = document.querySelector("#location-5");
 const topLocationCheckboxes = document.querySelectorAll(
   "[data-location-param]"
 );
@@ -73,7 +73,7 @@ topLocationCheckboxes.forEach(function (item) {
 });
 
 /* Показать еще 3 доп опции с чекбоксами в фильтре */
-const showMoreOptions = document.querySelector(".widget__btn-show-hidden");
+const showMoreOptions = document.querySelector(".show-more");
 const hiddenCheckBoxes = document.querySelectorAll(".checkbox--hidden");
 
 showMoreOptions.onclick = function (e) {

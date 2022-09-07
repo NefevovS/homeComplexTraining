@@ -35,7 +35,6 @@ body {
 }
 @media (max-width: 829px) {
   .sidebar {
-    /* display: none; */
     position: fixed;
     margin-left: 0 !important;
     top: 0;
@@ -45,7 +44,11 @@ body {
     padding: 15px;
     box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.37);
     overflow-y: scroll;
-    /* transform: translateX(-120%); */
+    transform: translateX(-120%);
+    transition: transform 0.3s ease-in;
+  }
+  .sidebar--mobile-active {
+    transform: translateX(0%);
   }
   .container {
     width: 600px;
@@ -62,6 +65,9 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 30px;
+}
+.hidden-cards {
+  display: none;
 }
 @media (max-width: 599px) {
   .cards__holder {
@@ -189,6 +195,7 @@ body {
   color: #000000;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .widget__title::after {
   content: "";
@@ -203,8 +210,15 @@ body {
   background-position: center;
 }
 
+.widget__title--active::after {
+  transform: rotate(180deg);
+}
+
 /*.widget__body {
 }*/
+.widget__body--hidden {
+  display: none;
+}
 
 /*LOCATION BUTTONS GROUP*/
 
@@ -361,6 +375,9 @@ body {
   background-image: url(../sourses/img/check.svg);
   background-position: center;
   background-size: initial;
+}
+.checkbox--hidden {
+  display: none;
 }
 .hidden-elements {
   display: none;
